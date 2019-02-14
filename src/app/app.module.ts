@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CharacterSelectComponent } from './character-select/character-select.component';
+import { FramedataTableComponent } from './framedata-table/framedata-table.component';
+import { MainContainerComponent } from './main-container/main-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CharacterSelectComponent,
+    FramedataTableComponent,
+    MainContainerComponent
   ],
   imports: [
     BrowserModule,

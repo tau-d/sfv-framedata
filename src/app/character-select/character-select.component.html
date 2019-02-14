@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <select (change)="onCharacterSelect($event.target.value)">
+    <ng-container *ngFor="let char of characters | keyvalue">
+      <option *ngIf="char.key !== selectedCharacter; else isSelected">{{char.key}}</option>
+      <ng-template #isSelected>
+        <option selected="selected">{{char.key}}</option>
+      </ng-template>
+    </ng-container>
+  </select>
+
+  <select (change)="onCharacterModeSelect($event.target.value)">
+    <ng-container *ngFor="let movelist of characterData['moves'] | keyvalue">
+      <ng-container *ngIf="!isEmpty(movelist.value)">
+        <option *ngIf="movelist.key !== selectedCharacterMode; else isSelected">{{movelist.key}}</option>
+        <ng-template #isSelected>
+          <option selected="selected">{{movelist.key}}</option>
+        </ng-template>
+      </ng-container>
+    </ng-container>
+  </select>
+</nav>

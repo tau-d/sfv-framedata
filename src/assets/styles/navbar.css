@@ -1,0 +1,13 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--top-navbar-height);
+  background-color: var(--secondary-bg-color);
+  overflow: hidden;
+  display: inline-block;
+}
+
+.navbar select {
+  margin: 5px;
+}

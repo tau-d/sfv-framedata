@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './assets/styles/navbar.css';
+
+html {
+  --main-bg-color: #333;
+  --secondary-bg-color: #555;
+  --main-text-color: #e8e8e8;
+  --top-navbar-height: 50px;
+
+  min-height: 100%;
+  background-color: var(--main-bg-color);
+}
+
+body {
+  min-height: 100%;
+}
+
+.main {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  margin-top: var(--top-navbar-height);
+}

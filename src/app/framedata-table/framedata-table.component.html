@@ -1,0 +1,31 @@
+<h2>{{selectedCharacter}} ({{selectedCharacterMode}})</h2>
+<ng-container *ngFor="let movelist of characterFramedata['moves'] | keyvalue">
+  <table class="center" *ngIf="movelist.key === selectedCharacterMode">
+    <thead>
+      <th>Move</th>
+      <th>Move Command</th>
+      <th>Startup</th>
+      <th>Active</th>
+      <th>Recovery</th>
+      <th>On Hit</th>
+      <th>On Block</th>
+      <th>Damage</th>
+      <th>Stun</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let move of movelist.value | keyvalue:defaultOrder">
+        <td>{{move.value.moveName}}</td>
+        <td>{{move.value.plnCmd}}</td>
+        <td>{{move.value.startup}}</td>
+        <td>{{move.value.active}}</td>
+        <td>{{move.value.recovery}}</td>
+        <td>{{move.value.onHit}}</td>
+        <td>{{move.value.onBlock}}</td>
+        <td>{{move.value.damage}}</td>
+        <td>{{move.value.stun}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+</ng-container>
