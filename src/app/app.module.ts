@@ -10,9 +10,9 @@ import { MainContainerComponent } from './main-container/main-container.componen
 @NgModule({
   declarations: [
     AppComponent,
+    MainContainerComponent,
     CharacterSelectComponent,
-    FramedataTableComponent,
-    MainContainerComponent
+    FramedataTableComponent    
   ],
   imports: [
     BrowserModule,

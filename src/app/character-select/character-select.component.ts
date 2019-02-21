@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { CharacterDataService } from '../character-data.service';
 
@@ -29,14 +29,13 @@ export class CharacterSelectComponent implements OnInit {
       this.characterData = this.charDataService.getCharacter(this.selectedCharacter);
     });
     this.characters = this.charDataService.getAllCharacters();
-    console.log(this.characters);
   }
 
-  onCharacterSelect(newVal) {
+  onCharacterSelect(newVal: string) {
     this.router.navigate(['/' + newVal]);
   }
 
-  onCharacterModeSelect(newVal) {
+  onCharacterModeSelect(newVal: string) {
     this.router.navigate(['/' + this.selectedCharacter, { charMode: newVal}]);
   }
 

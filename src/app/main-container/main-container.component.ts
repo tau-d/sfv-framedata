@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-container.component.css']
 })
 export class MainContainerComponent implements OnInit {
-  title = 'sfv-framedata';
-  
   constructor() { }
 
   ngOnInit() {

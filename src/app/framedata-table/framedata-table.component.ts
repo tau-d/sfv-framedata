@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 import { CharacterDataService } from '../character-data.service';
 
@@ -18,7 +17,6 @@ export class FramedataTableComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private charDataService: CharacterDataService
   ) { }
 
@@ -30,7 +28,7 @@ export class FramedataTableComponent implements OnInit {
     });
   }
 
-  defaultOrder = (a, b) => {
+  defaultOrder = (a: any , b: any) => {
     return a.key;
   }
 }
